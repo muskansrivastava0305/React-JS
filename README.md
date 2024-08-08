@@ -68,8 +68,6 @@ Here are some guidelines on when to use each type of component:
 
  # --------------------------------------------------------------------------------------------------------------------------------
 
- It seems like you're asking about two important concepts in React: rerendering and conditional rendering.
-
 # Rerendering
 In React, a component will automatically rerender whenever its state or props change. This is a key feature of React's virtual DOM (a lightweight in-memory representation of your application's UI).
 
