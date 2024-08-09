@@ -226,8 +226,8 @@ useRef is a hook in React that allows you to create a reference to a DOM node or
 
 ## useRef is useful in several scenarios:
 
-*** 1. Accessing DOM nodes:*** You can use useRef to get a reference to a DOM node, allowing you to manipulate it directly.
-*** 2. Storing values that don't trigger re-renders:*** useRef can store values that don't trigger a re-render when they change, unlike state variables.
+*** 1. Accessing DOM nodes: *** You can use useRef to get a reference to a DOM node, allowing you to manipulate it directly.
+*** 2. Storing values that don't trigger re-renders: *** useRef can store values that don't trigger a re-render when they change, unlike state variables.
 *** 3. Creating instances of classes:*** You can use useRef to create an instance of a class, and then use that instance across renders.
 
 *** Syntax: ***
