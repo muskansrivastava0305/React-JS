@@ -128,7 +128,7 @@ function Greeting() {
   return isLoggedIn ? <div>Welcome back!</div> : <div>Please log in</div>;
 }
 ```
-## ===========================================================================================================
+### -------------------------------------------------------------------------------------------------------
 
 # Why Hooks?
 
@@ -189,6 +189,36 @@ function FetchData() {
 ```
 
 `In this example, the effect function fetches data from an API and updates the data state variable.`
+
+**3. useCallback**
+
+useCallback is used to memoize a function, so it's not recreated on every render.
+
+***Syntax:*** const memoizedCallback = useCallback(callbackFunction, dependencies)
+
+### Example:
+
+```
+import React, { useState, useCallback } from 'react';
+
+function SearchBar() {
+  const [query, setQuery] = useState('');
+
+  const handleSearch = useCallback(() => {
+    fetch(`https://api.example.com/search?q=${query}`)
+      .then(response => response.json())
+      .then(data => console.log(data));
+  }, [query]); // dependency array ensures the function is recreated when query changes
+
+  return (
+    <div>
+      <input type="text" value={query} onChange={e => setQuery(e.target.value)} />
+      <button onClick={handleSearch}>Search</button>
+    </div>
+  );
+}
+
+```
 
 
 
