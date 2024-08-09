@@ -128,8 +128,33 @@ function Greeting() {
   return isLoggedIn ? <div>Welcome back!</div> : <div>Please log in</div>;
 }
 ```
+## ===========================================================================================================
 
+# Why Hooks?
 
+Before hooks, functional components were limited in their capabilities. They couldn't have their own state or use lifecycle methods like componentDidMount. Hooks solve this problem by providing a way to use these features in functional components.
+
+1. useState
+useState is used to add state to functional components.
+
+Syntax: `const [state, setState] = useState(initialState)`
+
+```
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+```
+
+In this example, count is the state variable, and setCount is the function to update it.
 
 
 
