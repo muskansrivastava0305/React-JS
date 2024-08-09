@@ -220,5 +220,39 @@ function SearchBar() {
 
 ```
 
+**4. useRef**
 
+useRef is a hook in React that allows you to create a reference to a DOM node or a value that persists across renders. It's a way to "remember" a value or a DOM node, even when the component re-renders.
+
+## useRef is useful in several scenarios:
+
+*** 1. Accessing DOM nodes:*** You can use useRef to get a reference to a DOM node, allowing you to manipulate it directly.
+*** 2. Storing values that don't trigger re-renders:*** useRef can store values that don't trigger a re-render when they change, unlike state variables.
+*** 3. Creating instances of classes:*** You can use useRef to create an instance of a class, and then use that instance across renders.
+
+*** Syntax: ***
+`const ref = useRef(initialValue);`
+
+## Example
+
+```
+import React, { useRef } from 'react';
+
+function TextInput() {
+  const inputRef = useRef(null);
+
+  const handleFocus = () => {
+    inputRef.current.focus();
+  };
+
+  return (
+    <div>
+      <input ref={inputRef} type="text" />
+      <button onClick={handleFocus}>Focus input</button>
+    </div>
+  );
+}
+
+```
+In this example, `inputRef` is a reference to the input DOM node. The `handleFocus` function uses the `inputRef` to focus the `input` field.
 
