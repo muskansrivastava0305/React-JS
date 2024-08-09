@@ -66,7 +66,7 @@ Here are some guidelines on when to use each type of component:
  
  -In general, functional components are preferred for simple, presentational components, while class-based components are used for more complex, stateful components. However, with the introduction of React Hooks, functional components can now manage state and lifecycle methods as well, making them a more viable option for many use cases.
 
- ### --------------------------------------------------------------------------------------------------------------------------------
+ ### ---------------------------------------------------------------------------------------------------------
 
 # Rerendering
 In React, a component will automatically rerender whenever its state or props change. This is a key feature of React's virtual DOM (a lightweight in-memory representation of your application's UI).
