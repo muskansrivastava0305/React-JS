@@ -134,10 +134,11 @@ function Greeting() {
 
 Before hooks, functional components were limited in their capabilities. They couldn't have their own state or use lifecycle methods like componentDidMount. Hooks solve this problem by providing a way to use these features in functional components.
 
-1. useState
+**1. useState:-**
+
 useState is used to add state to functional components.
 
-Syntax: `const [state, setState] = useState(initialState)`
+***Syntax:*** `const [state, setState] = useState(initialState)`
 
 ```
 import React, { useState } from 'react';
@@ -154,7 +155,40 @@ function Counter() {
 }
 ```
 
-In this example, count is the state variable, and setCount is the function to update it.
+`In this example, count is the state variable, and setCount is the function to update it.`
+
+**2. useEffect**
+useEffect is used to handle side effects, such as making API calls or setting timers.
+
+***Syntax:*** useEffect(effectFunction, dependencies)
+
+### Exmaple:
+
+```
+import React, { useState, useEffect } from 'react';
+
+function FetchData() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => setData(data));
+  }, []); // empty dependency array means the effect runs only once
+
+  return (
+    <div>
+      <ul>
+        {data.map(item => (
+          <li key={item.id}>{item.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+```
+
+`In this example, the effect function fetches data from an API and updates the data state variable.`
 
 
 
