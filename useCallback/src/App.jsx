@@ -13,12 +13,12 @@ const Callbackhook = () => {
   };
 
   const addTodo = () => {
-    setTodo(() => [ ...preview, `new Entry`]);
+    setTodo((prev) => [ ...prev, `new Entry`]);
   };
 
   return (
     <>
-     <Todo todo={todo} addTodo={addTodo} />
+     <Todo.map todo={todo} addTodo={addTodo} />
      <br/>
      <div>
       count: {count}
@@ -28,4 +28,4 @@ const Callbackhook = () => {
   )
 }
 
-export default App
+export default Callbackhook
