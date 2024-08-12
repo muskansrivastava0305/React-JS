@@ -273,3 +273,88 @@ const memoizedValue = useMemo(() => {
 1. When the component renders, useMemo checks if the dependencies have changed.
 2. If the dependencies have changed, useMemo calls the function and returns the new result.
 3. If the dependencies haven't changed, useMemo returns the cached result from the previous render.
+
+### ---------------------------------------------------------------------------------------------------------------------
+
+## React js component lifecyle
+
+In React, a component's lifecycle refers to the series of events that occur from the moment the component is created to the moment it is removed from the DOM. Understanding the lifecycle of a React component is crucial for building robust and efficient applications.
+
+**1. Mounting**
+
+ - `constructor():` The component's constructor is called when the component is created. This is where you can initialize state and bind event handlers.
+ - `componentWillMount(): `This method is called immediately before the component is rendered to the DOM. It's a good place to perform any necessary setup or initialization.
+ - `render():` The component's render method is called to generate the JSX that will be rendered to the DOM.
+ - `componentDidMount():` This method is called after the component has been rendered to the DOM. It's a good place to perform any DOM-related operations, such as setting up event listeners.
+
+ **2. Updating**
+
+- `componentWillReceiveProps(nextProps): `This method is called when the component's props are updated. It's a good place to perform any necessary updates to the component's state.
+- `shouldComponentUpdate(nextProps, nextState)`: This method is called to determine whether the component should be re-rendered. If it returns false, the component will not be re-rendered.
+- `componentWillUpdate(nextProps, nextState):` This method is called immediately before the component is re-rendered.
+- `render():` The component's render method is called to generate the updated JSX.
+componentDidUpdate(prevProps, prevState): This method is called after the component has been re-rendered.
+
+**3. Unmounting**
+
+- `componentWillUnmount():` This method is called immediately before the component is removed from the DOM. It's a good place to perform any necessary cleanup, such as removing event listeners.
+
+**4. Error Handling**
+
+- `componentDidCatch(error, info):` This method is called if a child component throws an error. It's a good place to handle errors and prevent them from propagating up the component tree.
+
+### Here's a simple example of a React component that demonstrates some of these lifecycle methods:
+```
+import React, { Component } from 'react';
+
+class Counter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  componentWillMount() {
+    console.log('Component will mount');
+  }
+
+  componentDidMount() {
+    console.log('Component did mount');
+  }
+
+  componentWillReceiveProps(nextProps) {
+    console.log('Component will receive props', nextProps);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('Should component update?', nextProps, nextState);
+    return true;
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    console.log('Component will update', nextProps, nextState);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('Component did update', prevProps, prevState);
+  }
+
+  componentWillUnmount() {
+    console.log('Component will unmount');
+  }
+
+  render() {
+    return (
+      <div>
+        <p>Count: {this.state.count}</p>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Increment
+        </button>
+      </div>
+    );
+  }
+}
+
+export default Counter;
+
+```
+
