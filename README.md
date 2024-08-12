@@ -256,3 +256,20 @@ function TextInput() {
 ```
 In this example, `inputRef` is a reference to the input DOM node. The `handleFocus` function uses the `inputRef` to focus the `input` field.
 
+**4. useMemo :**
+
+`useMemo` is a hook in React that allows you to memoize a value so that it's not recalculated on every render. Memoization is an optimization technique that stores the result of an expensive function call so that it can be reused instead of recalculated.
+
+```
+const memoizedValue = useMemo(() => {
+  // expensive computation or function call
+  return result;
+}, [dependency1, dependency2, ...]);
+
+```
+
+### How does useMemo work?
+
+1. When the component renders, useMemo checks if the dependencies have changed.
+2. If the dependencies have changed, useMemo calls the function and returns the new result.
+3. If the dependencies haven't changed, useMemo returns the cached result from the previous render.
