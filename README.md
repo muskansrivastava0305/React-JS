@@ -367,7 +367,10 @@ A reusable component is a self-contained piece of code that represents a UI elem
 ### Characteristics of Reusable Components
 
 **1. Modular**: Reusable components are self-contained and don't rely on external state or context.
+
 **2. Configurable:** They can be customized using props to adapt to different use cases.
+
 **3. Reusable:** They can be used multiple times throughout the application without modification.
+
 **4. Decoupled:**They don't have tight coupling with other components or the application's global state.
 
