@@ -358,3 +358,16 @@ export default Counter;
 
 ```
 
+### ------------------------------------------------------------------------------------------------------------------------
+
+## What is a Reusable Component?
+
+A reusable component is a self-contained piece of code that represents a UI element or a group of UI elements. It's a function or a class that takes in props (short for "properties") and returns a JSX element.
+
+### Characteristics of Reusable Components
+
+**1. Modular**: Reusable components are self-contained and don't rely on external state or context.
+**2. Configurable:** They can be customized using props to adapt to different use cases.
+**3. Reusable:** They can be used multiple times throughout the application without modification.
+**4. Decoupled:**They don't have tight coupling with other components or the application's global state.
+
