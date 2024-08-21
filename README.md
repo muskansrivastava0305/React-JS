@@ -460,3 +460,37 @@ const Contact = () => {
 
 ```
 
+### Types of Routes:-
+
+1. Static routes: Static routes are routes that are defined at compile-time.
+
+2. Dynamic routes: Dynamic routes are routes that are generated at runtime.
+
+3. Nested routes: Nested routes are routes that are defined within other routes.
+
+## ----------------------------------------------------------------------------------------------------------
+
+## Higher order COmponent :-
+
+In React, a Higher-Order Component (HOC) is a function that takes a component as an argument and returns a new component with additional props or behavior. HOCs are a powerful tool for code reuse and abstraction in React applications.
+
+## What is a Higher-Order Component?
+
+**A Higher-Order Component is a function that:**
+
+1. Takes a component as an argument (the "wrapped" component)
+
+2. Returns a new component with additional props or behavior.
+
+The returned component is a new instance of the original component, but with the added functionality or props.
+
+### Why use Higher-Order Components?
+
+**HOCs are useful for:**
+
+1.Code reuse: HOCs allow you to extract common functionality or behavior from multiple components and reuse it in a single place.
+
+2. Abstraction: HOCs provide a way to abstract away complex logic or behavior, making it easier to understand and maintain your code.
+
+3. Decoupling: HOCs help decouple components from each other, making it easier to change or replace individual components without affecting the rest of the application.
+
