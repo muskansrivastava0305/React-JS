@@ -374,3 +374,89 @@ A reusable component is a self-contained piece of code that represents a UI elem
 
 **4. Decoupled:**They don't have tight coupling with other components or the application's global state.
 
+### Tools and libraries for building reusable components
+
+**React:** The React library provides a number of features and tools for building reusable components, including JSX, props, and state management.
+
+**Redux:** The Redux library provides a state management system that can be used to manage state across multiple components.
+
+**React Router:** The React Router library provides a way to manage client-side routing and navigation between components.
+
+**Storybook:** The Storybook library provides a way to develop and test components in isolation, making it easier to build and maintain reusable components.
+
+## -----------------------------------------------------------------------------------------------------------
+
+# Ract Router :-
+
+React Router is a popular library for managing client-side routing in React applications. It allows you to define routes for your application and navigate between them using a simple and intuitive API.
+
+### Key Features of React Router :-
+
+1. Client-side routing: React Router allows you to manage client-side routing, which means that the routing is handled by the client (i.e., the browser) rather than the server.
+
+2. Declarative routing: React Router uses a declarative approach to routing, which means that you define the routes for your application using a simple and intuitive syntax.
+
+3. Dynamic routing: React Router allows you to define dynamic routes that can be generated at runtime.
+
+4. Route nesting: React Router allows you to nest routes, which means that you can define routes within other routes.
+
+5. Route parameters: React Router allows you to define route parameters, which can be used to pass data between routes.
+
+6. Redirects: React Router allows you to define redirects, which can be used to redirect users to different routes.
+
+7. Server-side rendering: React Router supports server-side rendering, which means that you can render your application on the server and then send the rendered HTML to the client.
+
+### Basic Concepts
+
+1. Routes: A route is a mapping between a URL and a component.
+
+2. Route components: A route component is a React component that is rendered when a route is matched.
+
+3.Route parameters: Route parameters are values that are passed from one route to another.
+
+4. Link: A link is a component that allows users to navigate between routes.
+
+5. Redirect: A redirect is a component that redirects users to a different route.
+
+```
+import React from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <div>
+        <h1>Home</h1>
+        <p>
+          <Link to="/about">About</Link>
+        </p>
+        <p>
+          <Link to="/contact">Contact</Link>
+        </p>
+      </div>
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
+    </BrowserRouter>
+  );
+};
+
+const About = () => {
+  return (
+    <div>
+      <h1>About</h1>
+      <p>This is the about page.</p>
+    </div>
+  );
+};
+
+const Contact = () => {
+  return (
+    <div>
+      <h1>Contact</h1>
+      <p>This is the contact page.</p>
+    </div>
+  );
+};
+
+```
+
